@@ -41,3 +41,9 @@ CoreUI-React#v2.0.0
 │
 └── package.json
 ```
+
+
+## memo
+
+- /src/containers/DefaultLayout/DefaultLayout.js
+- /src/_nav.js
