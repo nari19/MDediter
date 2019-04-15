@@ -68,7 +68,9 @@ class DefaultLayout extends Component {
                         )} />
                     ) : (null);
                   })}
-                  <Redirect from="/" to="/dashboard" />
+                  {/* nari19をトップ画面に変更 */}
+                  <Redirect from="/" to="/nari19" />
+                  {/* <Redirect from="/" to="/dashboard" /> */}
                 </Switch>
               </Suspense>
             </Container>
