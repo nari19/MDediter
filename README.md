@@ -15,11 +15,12 @@ $ npm run duild
 
 ## Branch
 
-|ブランチ名|内容|
+|ブランチ名|issue|
 |-|-|
 |master|最小限のコンテンツ|
 |coreui|オリジナル|
-|test0|開発用|
+|test0|nari19ディレクトリ作成/headerコメントアウト/menuコメントアウト(_nav.js)|
+|test1|_nav.js,routes.js メニューを最小限に減らす|
 
 
 ## What's included
@@ -47,3 +48,7 @@ CoreUI-React#v2.0.0
 
 - /src/containers/DefaultLayout/DefaultLayout.js
 - /src/_nav.js
+- /src/routes.js
+
+new menu  => (Home )
+
