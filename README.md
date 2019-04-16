@@ -51,3 +51,4 @@ new menu  => (Home )
 |test0|nari19ディレクトリ作成/headerコメントアウト/menuコメントアウト(_nav.js)/リダイレクトをnari19に変換(DefaultLayout.js L71)|
 |test1|MDediter, MemoPrint 作成|
 |test2|_nav.js,routes.js メニューを最小限に減らす|
+|test3||
