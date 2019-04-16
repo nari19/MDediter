@@ -14,6 +14,16 @@ export default {
       },
       class: ''             // optional class names space delimited list for title item ex: "text-center"
     },
+    {
+      name: 'Memo print',
+      url: '/app/memo-print',
+      icon: 'icon-notebook',
+    },
+    {
+      name: 'MD editer',
+      url: '/app/md-editer',
+      icon: 'icon-note',
+    },
     // {
     //   name: 'Dashboard',
     //   url: '/dashboard',
