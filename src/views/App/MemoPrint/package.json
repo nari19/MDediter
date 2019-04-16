@@ -1,0 +1,6 @@
+{
+  "name": "MemoPrint",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./MemoPrint.js"
+}
