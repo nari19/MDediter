@@ -36,22 +36,23 @@ class DefaultLayout extends Component {
     return (
       <div className="app">
         {/* ヘッダーをコメントアウト */}
-        {/* <AppHeader fixed>
-          <Suspense  fallback={this.loading()}>
-            <DefaultHeader onLogout={e=>this.signOut(e)}/>
+        <AppHeader fixed>
+          <Suspense  fallback={this.loading()} >
+            <DefaultHeader onLogout={e=>this.signOut(e)} />
           </Suspense>
-        </AppHeader> */}
+        </AppHeader>
         <div className="app-body">
           <AppSidebar fixed display="lg">
             <AppSidebarHeader />
             <AppSidebarForm />
             <Suspense>
-            <AppSidebarNav navConfig={navigation} {...this.props} />
+              <AppSidebarNav navConfig={navigation} {...this.props} />
             </Suspense>
             <AppSidebarFooter />
             <AppSidebarMinimizer />
           </AppSidebar>
           <main className="main">
+            {/* パンくずリスト */}
             <AppBreadcrumb appRoutes={routes}/>
             <Container fluid>
               <Suspense fallback={this.loading()}>
