@@ -16,12 +16,20 @@ class MemoPrint extends Component {
             <i className="icon-drop"></i> Memo print
           </div>
           <div className="card-body" id="target">
-            <p>aadfv</p>
+            <p>aadfvadkjfhvldkfjbvld
+              dkfjvhdlskfjbhvldkf
+            </p>
+            <p>aadfvadkjfhvldkfjbvld
+              dkfjvhdlskfjbhvldkf
+            </p>
+            <p>aadfvadkjfhvldkfjbvld
+              dkfjvhdlskfjbhvldkf
+            </p>
 
-            <div id="downloadImageButton" className="btn btn-primary btn-lg" onClick={this.handleClick} >Sava image</div>
+          </div>
+          <div id="downloadImageButton" className="btn btn-primary btn-lg" onClick={this.handleClick} >Sava image</div>
             <a id="getImage" href="" className="d-none" download="image.png">画像保存</a>
           </div>
-        </div>
       </div>
     );
   }
