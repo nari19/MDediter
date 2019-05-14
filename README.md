@@ -53,4 +53,5 @@ new menu  => (Home )
 |test1|MDediter, MemoPrint 作成|
 |test2|_nav.js,routes.js メニューを最小限に減らす|
 |test3|DefaultHeader整理|
-|test4|"Memo print"記述|
+|test4|"Memo print"記述 logic.js 作成|
+|test5|MemlPrint.js 記述2|
