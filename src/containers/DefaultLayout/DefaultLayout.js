@@ -53,7 +53,7 @@ class DefaultLayout extends Component {
           </AppSidebar>
           <main className="main">
             {/* パンくずリスト */}
-            <AppBreadcrumb appRoutes={routes}/>
+            {/* <AppBreadcrumb appRoutes={routes}/> */}
             <Container fluid>
               <Suspense fallback={this.loading()}>
                 <Switch>

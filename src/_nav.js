@@ -1,7 +1,7 @@
 export default {
   items: [
     {
-      name: 'nari19',
+      name: 'nari19 doodle',
       url: '/nari19',
       icon: 'icon-ghost'
     },

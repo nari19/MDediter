@@ -54,4 +54,4 @@ new menu  => (Home )
 |test2|_nav.js,routes.js メニューを最小限に減らす|
 |test3|DefaultHeader整理|
 |test4|"Memo print"記述 logic.js 作成|
-|test5|MemlPrint.js 記述2|
+|test5|MemlPrint.js 記述2 textarea DOM構築  https://qiita.com/kadowakid/items/ab6231347098d24dd7ab|
