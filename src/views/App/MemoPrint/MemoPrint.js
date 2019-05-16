@@ -48,7 +48,6 @@ class MemoPrint extends Component {
       </div>
     );
   }
-
   handleClick = () => {
     getDisplayImage();
   };

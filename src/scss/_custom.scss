@@ -1,7 +1,23 @@
 // Here you can add other styles
+@media screen and (min-width: 992px) {
+  #root .main {
+      padding-top: 30px;
+  }
+}
 
-#root .main {
-    padding-top: 30px;
+#logo {
+  margin: 0 auto;
+  color:#444;
+  font-weight: 700;
+  letter-spacing:1px;
+}
+
+.app-header {
+ position: static!important;
+}
+
+#downloadImageButton {
+  margin: 5px;
 }
 
 // MemoPrint
@@ -18,7 +34,7 @@ textarea {
   font-size: 1.2em;
   padding: 0.4em 0.8em;
   width: 100%;
-  min-height: 48vh;
+  height: 65vh;
 }
 
 textarea:focus {
@@ -31,6 +47,6 @@ textarea:focus {
     padding: 30px;
     font-size: 1.2em;
     width: 100%;
-    max-width: 350px;
     color: #353b3f;
+    min-height: 50vh;
 }

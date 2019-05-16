@@ -21,13 +21,14 @@ class DefaultHeader extends Component {
 
     return (
       <React.Fragment>
-        <AppSidebarToggler className="d-lg-none" display="md" mobile />
+        <h3 id="logo">nari19 - MDediter</h3>
+        {/* <AppSidebarToggler className="d-lg-none" display="md" mobile /> */}
         {/* <AppNavbarBrand
           full={{ src: logo, width: 89, height: 25, alt: 'CoreUI Logo' }}
           minimized={{ src: sygnet, width: 30, height: 30, alt: 'CoreUI Logo' }}
         /> */}
         {/* メニュー表示 */}
-        <AppSidebarToggler className="d-md-down-none" display="lg" />
+        {/* <AppSidebarToggler className="d-md-down-none" display="lg" /> */}
           
         {/* <Nav className="d-md-down-none" navbar>
           <NavItem className="px-3">

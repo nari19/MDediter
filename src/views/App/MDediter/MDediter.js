@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import {  } from "./logic";
+import { getDisplayImage } from "./logic";
 import "../../../scss/_custom.scss";
+import { Badge, Button, Card, CardBody, CardFooter, CardHeader, Col, Collapse, Fade, Row } from 'reactstrap';
 import marked from "marked";
 
 class MDediter extends Component {
@@ -22,24 +23,39 @@ class MDediter extends Component {
 
     return (
       <div className="animated fadeIn">
-        <div className="card">
-          <div className="card-header">
-            <i className="icon-note"></i> MDediter
-          </div>
-          <textarea className="card-body"  
-                    onChange={this.updateMarkdown} defaultValue={this.state.html}></textarea>
-          <a className="btn btn-primary btn-lg" href="data:text/html;charset=UTF-8,<html contenteditable>">Open in a new tab</a>
-        </div>
+        <Row>
+          <Col xs="12" sm="7" md="7">
+            <Card>
+              <CardHeader>
+                <i className="icon-note"></i> Input
+              </CardHeader>
+              
+              <textarea className="card-body"  
+                        onChange={this.updateMarkdown} defaultValue={this.state.html}></textarea>
+              
+              <CardFooter>
+                  <Button id="downloadImageButton" className="btn-lg pull-right" color="primary" onClick={this.handleClick} >Sava image</Button>
+                  <a id="getImage" href="" className="d-none" download="image.png">画像保存</a>
+                  <Button id="downloadImageButton" className="btn-lg pull-right" color="primary" onClick={this.handleClick} >Open in a new tab</Button>
+              </CardFooter>
+            </Card>
+          </Col>
 
-        <h4 className="text-muted" >Preview</h4>
-        <div className="card textarea-style" id="target">
-          <div className="cardBody">
-              <div dangerouslySetInnerHTML={{ __html: html }}></div>
-          </div>
-        </div>
+          <Col xs="12" sm="5" md="5">
+            <h4 className="text-muted" >Preview</h4>
+            <div className="card textarea-style" id="target">
+              <CardBody>
+                  <div dangerouslySetInnerHTML={{ __html: html }}></div>
+              </CardBody>
+            </div>
+          </Col>
+        </Row>
       </div>
     );
   }
+  handleClick = () => {
+    getDisplayImage();
+  };
 }
 
 export default MDediter;
