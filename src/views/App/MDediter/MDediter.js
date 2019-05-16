@@ -1,47 +1,45 @@
 import React, { Component } from 'react';
-import { getDisplayImage } from "./logic";
+import {  } from "./logic";
 import "../../../scss/_custom.scss";
+import marked from "marked";
 
 class MDediter extends Component {
-  // textareaをDOMに書き出す  https://qiita.com/kadowakid/items/ab6231347098d24dd7ab
+  // Markdown react  https://tech.innovator.jp.net/entry/2017/12/08/120000
   constructor(props) {
     super();
-    this.state = {text :"You can write notes."}
+    this.state = { html :"You can write notes." };
+    this.updateMarkdown = this.updateMarkdown.bind(this);
   }
-  changeText(e){
-    this.setState({text : e.target.value});
-  }
-  editText(text) {
-    const regExp = /(https?:\/\/\S+|\n)/;
-    const regExpBr = /\n/;
-    const regExpLink = /https?:\/\/\S+/;
-    return text.split(regExp).map(function (line,i) {
-        return line.match(regExpBr)
-          ? (<br key={i} />) 
-          : line.match(regExpLink)
-            ? (<a target="_blank" href={line} key={i}>{line}</a>)
-            : line
+  
+  updateMarkdown(event) {
+    this.setState({
+      html: marked(event.target.value)
     });
-  } 
+  }
 
   render() {
+    const html = this.state.html;
+
     return (
       <div className="animated fadeIn">
         <div className="card">
           <div className="card-header">
-            <i className="icon-notebook"></i> MDediter
+            <i className="icon-note"></i> MDediter
           </div>
           <textarea className="card-body"  
-                    onChange={(e)=>this.changeText(e)} defaultValue={this.state.text}></textarea>
-          <div id="downloadImageButton" className="btn btn-primary btn-lg" onClick={this.handleClick} >Open in a new tab</div>
+                    onChange={this.updateMarkdown} defaultValue={this.state.html}></textarea>
+          <a className="btn btn-primary btn-lg" href="data:text/html;charset=UTF-8,<html contenteditable>">Open in a new tab</a>
+        </div>
+
+        <h4 className="text-muted" >Preview</h4>
+        <div className="card textarea-style" id="target">
+          <div className="cardBody">
+              <div dangerouslySetInnerHTML={{ __html: html }}></div>
+          </div>
         </div>
       </div>
     );
   }
-
-  handleClick = () => {
-    getDisplayImage();
-  };
 }
 
 export default MDediter;
