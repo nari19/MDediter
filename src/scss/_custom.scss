@@ -13,16 +13,24 @@ textarea {
   background-image: none;
   border: 1px solid #c8ced3;
   border-radius: 0 0 5px 5px;
-  color: #23282c;
+  color: #353b3f;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 1.3em;
+  font-size: 1.2em;
   padding: 0.4em 0.8em;
   width: 100%;
-  min-height: 60vh;
+  min-height: 48vh;
 }
 
 textarea:focus {
   border: 1px solid #c8ced3;
   box-shadow: none;
   outline: none;
+}
+
+.textarea-style {
+    padding: 30px;
+    font-size: 1.2em;
+    width: 100%;
+    max-width: 350px;
+    color: #353b3f;
 }
