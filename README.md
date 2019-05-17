@@ -12,6 +12,7 @@
 ```
 $ npm start
 $ npm run duild
+$ serve -s build
 ```
 
 ## What's included
