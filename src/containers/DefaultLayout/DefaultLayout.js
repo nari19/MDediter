@@ -70,7 +70,7 @@ class DefaultLayout extends Component {
                     ) : (null);
                   })}
                   {/* nari19をトップ画面に変更 */}
-                  <Redirect from="/" to="/nari19" />
+                  <Redirect from="/" to="/app/md-editer" />
                   {/* <Redirect from="/" to="/dashboard" /> */}
                 </Switch>
               </Suspense>

@@ -56,4 +56,5 @@ new menu  => (Home )
 |test4|"Memo print"記述 logic.js 作成|
 |test5|MemlPrint.js 記述2 textarea DOM構築  https://qiita.com/kadowakid/items/ab6231347098d24dd7ab|
 |test6|MDediter基礎完成 nari19/memoprint/MDediter 残す|
-|test7|side-navを消去 inputとoutputで2カラムにする GithubCSS追加|
+|test7|side-navを消去 inputとoutputで2カラムにする GithubCSS追加| 
+|test8|不要なコード、ファイルの削除|
