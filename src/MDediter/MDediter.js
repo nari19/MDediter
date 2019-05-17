@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { getDisplayImage } from "./logic";
 import "../scss/_custom.scss";
 import "./github.scss";
-import { Button, Card, CardBody, CardFooter, CardHeader, Col, Row } from 'reactstrap';
+import { Button, Card, CardFooter, CardHeader, Col, Row } from 'reactstrap';
 import {Nav, NavItem, NavLink, TabContent, TabPane} from 'reactstrap';
 import marked from "marked";
 
@@ -47,12 +47,10 @@ class MDediter extends Component {
   }
 
   render() {
-    const html = this.state.html;
-
     return (
       <div className="animated fadeIn">
         <Row>
-          <Col xs="12" sm="7" md="7">
+          <Col xs="12" sm="12" md="6" lg="7">
             <Card>
               <CardHeader>
                 <i className="icon-note"></i> Input
@@ -70,7 +68,7 @@ class MDediter extends Component {
             </Card>
           </Col>
 
-          <Col xs="12" sm="5" md="5">
+          <Col xs="12" sm="12" md="6" lg="5">
             <Nav tabs>
               <NavItem>
                 <NavLink
