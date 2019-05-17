@@ -57,6 +57,5 @@ new menu  => (Home )
 |test5|MemlPrint.js 記述2 textarea DOM構築  https://qiita.com/kadowakid/items/ab6231347098d24dd7ab|
 |test6|MDediter基礎完成 nari19/memoprint/MDediter 残す|
 |test7|side-navを消去 inputとoutputで2カラムにする GithubCSS追加| 
-|test8|不要なコード、ファイルの削除  app/MemoPrint/ nari19/ DefaultAside.js 
-        ライブラリ整理　DefaultHeader DefaultLayout|
+|test8|不要なコード、ファイルの削除  app/MemoPrint/ nari19/ DefaultAside.js  ライブラリ整理　DefaultHeader DefaultLayout|
 |test9|_nav.js削除  src/viws/app/MDediter  => src/MDediter|

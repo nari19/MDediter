@@ -32,8 +32,6 @@ class DefaultLayout extends Component {
         </AppHeader>
         <div className="app-body">
           <main className="main">
-            {/* パンくずリスト */}
-            {/* <AppBreadcrumb appRoutes={routes}/> */}
             <Container fluid>
               <Suspense fallback={this.loading()}>
                 <Switch>
@@ -50,7 +48,7 @@ class DefaultLayout extends Component {
                     ) : (null);
                   })}
                   {/* nari19をトップ画面に変更 */}
-                  <Redirect from="/" to="/app/md-editer" />
+                  <Redirect from="/" to="/" />
                 </Switch>
               </Suspense>
             </Container>

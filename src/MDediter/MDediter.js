@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { getDisplayImage } from "./logic";
-import "../../../scss/_custom.scss";
+import "../scss/_custom.scss";
 import "./github.scss";
 import { Button, Card, CardBody, CardFooter, CardHeader, Col, Row } from 'reactstrap';
 import marked from "marked";

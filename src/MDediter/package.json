@@ -1,5 +1,5 @@
 {
-  "name": "Typography",
+  "name": "MDediter",
   "version": "0.0.0",
   "private": true,
   "main": "./MDediter.js"
