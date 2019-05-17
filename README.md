@@ -59,3 +59,4 @@ new menu  => (Home )
 |test7|side-navを消去 inputとoutputで2カラムにする GithubCSS追加| 
 |test8|不要なコード、ファイルの削除  app/MemoPrint/ nari19/ DefaultAside.js 
         ライブラリ整理　DefaultHeader DefaultLayout|
+|test9|_nav.js削除  src/viws/app/MDediter  => src/MDediter|
