@@ -47,7 +47,7 @@ class DefaultLayout extends Component {
                         )} />
                     ) : (null);
                   })}
-                  {/* nari19をトップ画面に変更 */}
+                  {/* MDediterをトップ画面に変更 */}
                   <Redirect from="/" to="/" />
                 </Switch>
               </Suspense>
