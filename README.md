@@ -11,8 +11,10 @@
 
 ```
 $ npm start
-$ npm run duild
+$ npm run build
 $ serve -s build
+
+$ npm run deploy   // リモートのgh-pagesブランチにデプロイ
 ```
 
 ## What's included
