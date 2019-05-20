@@ -2,10 +2,7 @@ import React, { Component, Suspense } from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
 import { Container } from 'reactstrap';
 
-import {
-  AppFooter,
-  AppHeader,
-} from '@coreui/react';
+import { AppFooter,AppHeader } from '@coreui/react';
 // routes config
 import routes from '../../routes';
 
