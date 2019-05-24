@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { getDisplayImage } from "./logic";
 import "../scss/_custom.scss";
 import "./github.scss";
+import Viewer from '../Viewer/Viewer';
+import DomHTML from '../Viewer/DomHTML';
 import { Button, Card, CardFooter, CardHeader, Col, Row } from 'reactstrap';
 import {Nav, NavItem, NavLink, TabContent, TabPane} from 'reactstrap';
 import marked from "marked";
@@ -64,6 +66,7 @@ class MDediter extends Component {
                   <Button id="downloadImageButton" className="btn-lg pull-right" color="primary" onClick={this.handleClick} >Sava image</Button>
                   <a id="getImage" href="./" className="d-none" download="image.png">画像保存</a>
                   {/* <Button id="downloadImageButton" className="btn-lg pull-right" color="primary" onClick={this.handleClick} >Open in a new tab</Button> */}
+                  <Viewer svg={this.renderSvg()} />
               </CardFooter>
             </Card>
           </Col>
@@ -98,7 +101,17 @@ class MDediter extends Component {
   }
   handleClick = () => {
     getDisplayImage();
-  };
+  }
+
+  /**
+   * @returns {XML}
+   */
+  renderSvg() {
+    const { html } = this.props;
+    return (
+      <DomHTML htmlCode={html}/>
+    );
+  }
 }
 
 export default MDediter;

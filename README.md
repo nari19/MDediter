@@ -63,5 +63,5 @@ new menu  => (Home )
 |test8|不要なコード、ファイルの削除  app/MemoPrint/ nari19/ DefaultAside.js  ライブラリ整理　DefaultHeader DefaultLayout|
 |test9|_nav.js削除  src/viws/app/MDediter  => src/MDediter|
 |test10|コード表示タブ 追加|
-|test11|github pagesにデプロイ|
-|test12|blob, dataスキーム受け渡し img/avators 削除|
+|test11|github pagesにデプロイ img/avators 削除|
+|test12|blobスキーム受け渡し src/Viewer/Viewer.js|
