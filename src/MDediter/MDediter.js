@@ -12,7 +12,7 @@ class MDediter extends Component {
   // Markdown react  https://tech.innovator.jp.net/entry/2017/12/08/120000
   constructor(props) {
     super();
-    this.state = { html :"" };
+    this.state = { html : "" };
     this.updateMarkdown = this.updateMarkdown.bind(this);
 
     this.toggle = this.toggle.bind(this);

@@ -64,4 +64,5 @@ new menu  => (Home )
 |test9|_nav.js削除  src/viws/app/MDediter  => src/MDediter|
 |test10|コード表示タブ 追加|
 |test11|github pagesにデプロイ img/avators 削除|
-|test12|blobスキーム受け渡し src/Viewer/Viewer.js|
+|test12|blobスキーム受け渡し src/Viewer/Viewer.js [In a new tab 機能]1|
+|test13|[In a new tab 機能]2|

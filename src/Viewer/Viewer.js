@@ -83,27 +83,16 @@ export default class Viewer extends CommonComponent {
     // JSX Template
     return (
       <div className={classNames('Viewer', className)}>
-        <div className="Viewer-canvas d-none">
-          {!isDisabled ? (
-            <canvas ref="canvas" width={svg.props.width} height={svg.props.height} />
-          ) : (
-            <div className="Viewer-error">
-              <p><i>&#xd83d;&#xde1c;</i> <strong>Oops...!</strong></p>
-              <p>Your using browser <br />does not support the feature.</p>
-            </div>
-          )}
-        </div>
+        <canvas className="d-none" ref="canvas" width={svg.props.width} height={svg.props.height} />
 
-        <Button className="btn-lg pull-right" color="primary">
-          {/* get svg ボタン */}
-          {!isDisabled && (
-            <div className="Viewer-command">
-              {['tab'].map((val) => (
-                <p key={val}><button value={val} onClick={this.clickDownloadButtonHandler}>In a new {val.toUpperCase()}</button></p>
-              ))}
-            </div>
-          )}
-        </Button>
+        {/* get svg ボタン */}
+        {!isDisabled && (
+          <div>
+            {['svg'].map((val) => (
+              <p key={val}><Button className="btn-lg pull-right" color="primary" value={val} onClick={this.clickDownloadButtonHandler}>In a new tab</Button></p>
+            ))}
+          </div>
+        )}
       </div>
       
     );
