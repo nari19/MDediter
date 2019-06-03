@@ -4,6 +4,7 @@ import { findDOMNode } from 'react-dom';
 import ReactDOMServer from 'react-dom/server';
 import CommonComponent from './CommonComponent';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 /**
  * @type {Symbol}
@@ -81,16 +82,30 @@ export default class Viewer extends CommonComponent {
 
     // JSX Template
     return (
-      <Button className="btn-lg pull-right" color="primary">
-        {/* get svg ボタン */}
-        {!isDisabled && (
-          <div className="Viewer-command">
-            {['svg'].map((val) => (
-              <p key={val}><button value={val} onClick={this.clickDownloadButtonHandler}>Get {val.toUpperCase()}</button></p>
-            ))}
-          </div>
-        )}
-      </Button>
+      <div className={classNames('Viewer', className)}>
+        <div className="Viewer-canvas d-none">
+          {!isDisabled ? (
+            <canvas ref="canvas" width={svg.props.width} height={svg.props.height} />
+          ) : (
+            <div className="Viewer-error">
+              <p><i>&#xd83d;&#xde1c;</i> <strong>Oops...!</strong></p>
+              <p>Your using browser <br />does not support the feature.</p>
+            </div>
+          )}
+        </div>
+
+        <Button className="btn-lg pull-right" color="primary">
+          {/* get svg ボタン */}
+          {!isDisabled && (
+            <div className="Viewer-command">
+              {['tab'].map((val) => (
+                <p key={val}><button value={val} onClick={this.clickDownloadButtonHandler}>In a new {val.toUpperCase()}</button></p>
+              ))}
+            </div>
+          )}
+        </Button>
+      </div>
+      
     );
   }
 
