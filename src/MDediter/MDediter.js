@@ -7,6 +7,8 @@ import DomHTML from '../Viewer/DomHTML';
 import { Button, Card, CardFooter, CardHeader, Col, Row } from 'reactstrap';
 import {Nav, NavItem, NavLink, TabContent, TabPane} from 'reactstrap';
 import marked from "marked";
+// eslint-disable-next-line import/no-webpack-loader-syntax
+import saTxt from '!!raw-loader!./sample.txt';
 
 
 
@@ -62,7 +64,7 @@ class MDediter extends Component {
               </CardHeader>
               
               <textarea className="card-body"  
-                        onChange={this.updateMarkdown} defaultValue="## You can write Markdown notation here."
+                        onChange={this.updateMarkdown} defaultValue={ saTxt }
               ></textarea>
               
               <CardFooter>
