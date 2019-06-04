@@ -25,8 +25,8 @@ export default class DomHTML extends PureComponent {
    */
   static get defaultProps() {
     return {
-      width    : 960,
-      height   : 1280
+      width    : 560,
+      height   : 880
     }
   }
 

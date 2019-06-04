@@ -62,7 +62,8 @@ new menu  => (Home )
 |test7|side-navを消去 inputとoutputで2カラムにする GithubCSS追加| 
 |test8|不要なコード、ファイルの削除  app/MemoPrint/ nari19/ DefaultAside.js  ライブラリ整理　DefaultHeader DefaultLayout|
 |test9|_nav.js削除  src/viws/app/MDediter  => src/MDediter|
-|test10|コード表示タブ 追加|
-|test11|github pagesにデプロイ img/avators 削除|
-|test12|blobスキーム受け渡し src/Viewer/Viewer.js [In a new tab 機能]1|
+|test10|コード表示タブ 追加 　|
+|test11|github pagesにデプロイ img/avators 削除 =>デプロイ|
+|test12|blobスキーム受け渡し src/Viewer/Viewer.js [In a new tab 機能]1 =>デプロイ|
 |test13|[In a new tab 機能]2|
+||test14|In a new tab 機能をHTMLで実装 IEでの利用&縦幅を自由に選択|
