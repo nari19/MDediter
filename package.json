@@ -40,6 +40,7 @@
   },
   "devDependencies": {
     "gh-pages": "^2.0.1",
+    "raw-loader": "^2.0.0",
     "react-scripts": "^2.1.8"
   },
   "scripts": {
@@ -49,7 +50,6 @@
     "test:cov": "react-scripts test --coverage",
     "test:debug": "react-scripts --inspect-brk test --runInBand",
     "eject": "react-scripts eject",
-    
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },

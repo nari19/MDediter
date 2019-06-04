@@ -8,6 +8,8 @@ import { Button, Card, CardFooter, CardHeader, Col, Row } from 'reactstrap';
 import {Nav, NavItem, NavLink, TabContent, TabPane} from 'reactstrap';
 import marked from "marked";
 
+
+
 class MDediter extends Component {
   // Markdown react  https://tech.innovator.jp.net/entry/2017/12/08/120000
   constructor(props) {
@@ -47,6 +49,7 @@ class MDediter extends Component {
       html: marked(event.target.value)
     });
   }
+
 
   render() {
     return (
@@ -107,7 +110,7 @@ class MDediter extends Component {
    * @returns {XML}
    */
   renderSvg() {
-    const { html } = this.props;
+    const html = this.state.html;
     return (
       <DomHTML htmlCode={html}/>
     );

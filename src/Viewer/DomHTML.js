@@ -1,6 +1,8 @@
 import React, { PureComponent } from 'react';
 import ReactDOMServer from 'react-dom/server';
 import PropTypes from 'prop-types';
+// eslint-disable-next-line import/no-webpack-loader-syntax
+import gtCss from '!!raw-loader!../MDediter/github.scss';
 
 /**
  * DomHTML class
@@ -19,7 +21,7 @@ export default class DomHTML extends PureComponent {
   }
 
   /**
-   * @returns {{width: number, height: number}}
+   * @returns {{width: number, height: number, cssCode: string}}
    */
   static get defaultProps() {
     return {
@@ -34,12 +36,13 @@ export default class DomHTML extends PureComponent {
   render() {
     // cache
     const { width, height } = this.props;
-
+    
     // JSX template
     return (
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox={`0 0 ${width} ${height}`} width={width} height={height}>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox={`0 0 ${width} ${height}`} width="100%" >
+        <style>{ gtCss }</style>
         <g dangerouslySetInnerHTML={{
-          __html: `<foreignObject x="0" y="0" width="100%" height="100%">${ReactDOMServer.renderToStaticMarkup(this.renderInnerHtml())}</foreignObject>`
+          __html: `<foreignObject x="0" y="50" width="100%" height="100%" class="markdown-body">${ReactDOMServer.renderToStaticMarkup(this.renderInnerHtml())}</foreignObject>`
         }} />
       </svg>
     );
