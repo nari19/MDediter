@@ -4,13 +4,7 @@ export async function getDisplayImage() {
     // html2canvas実行
     html2canvas(document.getElementById("target")).then(function(canvas) {
         downloadImage(canvas.toDataURL());
-    });
-    // html2canvas(document.getElementById("target"), {
-    //     proxy: true,
-    //     useCORS: true
-    //     }).then(function(canvas) {
-    //         downloadImage(canvas.toDataURL());
-    // });
+    })
 }
     
 

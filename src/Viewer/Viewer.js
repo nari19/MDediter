@@ -121,7 +121,8 @@ export default class Viewer extends CommonComponent {
     const canvas        = findDOMNode(this.refs.canvas);
     const context       = canvas.getContext('2d');
     const imageEl       = new Image();
-    const staticSvgBlob = new Blob([this.renderSvgToStaticMarkup()], { type: 'image/svg+xml;charset=utf-8' });
+    // const staticSvgBlob = new Blob([this.renderSvgToStaticMarkup()], { type: 'image/svg+xml;charset=utf-8' });
+    const staticSvgBlob = new Blob([this.renderSvgToStaticMarkup()], { type: 'text/html;charset=utf-8' });
     const url           = URL.createObjectURL(staticSvgBlob);
 
     // set load event handler
