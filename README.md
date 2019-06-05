@@ -1,4 +1,4 @@
-# react-coreui
+# nari19-MDediter
 
 ## 参考URL
 
@@ -67,3 +67,4 @@ new menu  => (Home )
 |test12|blobスキーム受け渡し src/Viewer/Viewer.js [In a new tab 機能]1 =>デプロイ|
 |test13|[In a new tab 機能]2|
 ||test14|In a new tab 機能をHTMLで実装 IEでの利用&縦幅を自由に選択|
+|test15|canvas svg のキーワードを修正|

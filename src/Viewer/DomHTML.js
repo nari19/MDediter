@@ -39,6 +39,7 @@ export default class DomHTML extends PureComponent {
     const HtmlStyle = {
       maxWidth: "880px",
       margin: "0 auto",
+      padding: "0 50px"
     }
 
     // JSX template

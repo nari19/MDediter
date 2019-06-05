@@ -16,3 +16,9 @@ $ foo
 $ bar
 $ baz
 ```
+
+<style>
+    object{
+       padding: 0 10px;
+    }
+</style>
