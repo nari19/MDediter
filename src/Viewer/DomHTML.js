@@ -44,12 +44,6 @@ export default class DomHTML extends PureComponent {
 
     // JSX template
     return (
-      // <svg xmlns="http://www.w3.org/2000/svg" viewBox={`0 0 ${width} ${height}`} width="100%" >
-      //   <style>{ gtCss }</style>
-      //   <g dangerouslySetInnerHTML={{
-      //     __html: `<foreignObject x="0" y="0" width="100%" height="100%" class="markdown-body">${ReactDOMServer.renderToStaticMarkup(this.renderInnerHtml())}</foreignObject>`
-      //   }} />
-      // </svg>
       <html lang="jp">
         <head>
           <meta charset="utf-8"/>

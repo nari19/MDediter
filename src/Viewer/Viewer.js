@@ -4,17 +4,16 @@ import { findDOMNode } from 'react-dom';
 import ReactDOMServer from 'react-dom/server';
 import CommonComponent from './CommonComponent';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 
 /**
  * @type {Symbol}
  */
-const keyOfStaticSvgBlob = Symbol('staticSvgBlob');
+const keyOfStaticHtmlBlob = Symbol('staticHtmlBlob');
 
 /**
  * @type {string|*}
  */
-let lastSvgUrl;
+let lastHtmlUrl;
 
 /**
  * Viewer component class
@@ -51,7 +50,7 @@ export default class Viewer extends CommonComponent {
     super(props);
 
     // property
-    this[keyOfStaticSvgBlob] = null;
+    this[keyOfStaticHtmlBlob] = null;
 
     // bind context
     this.bindContextAll(
@@ -63,14 +62,14 @@ export default class Viewer extends CommonComponent {
    * lifecycle
    */
   componentDidMount() {
-    this[keyOfStaticSvgBlob] = this.drawCanvas();
+    this[keyOfStaticHtmlBlob] = this.drawCanvas();
   }
 
   /**
    * lifecycle
    */
   componentDidUpdate() {
-    this[keyOfStaticSvgBlob] = this.drawCanvas();
+    this[keyOfStaticHtmlBlob] = this.drawCanvas();
   }
 
   /**
@@ -78,21 +77,19 @@ export default class Viewer extends CommonComponent {
    */
   render() {
     // cache
-    const { className, svg, isDisabled } = this.props;
+    const { html } = this.props;
 
     // JSX Template
     return (
-      <div className={classNames('Viewer', className)}>
-        <canvas className="d-none" ref="canvas" width={svg.props.width} height={svg.props.height} />
+      <div>
+        <canvas className="d-none" ref="canvas" width={html.props.width} height={html.props.height} />
 
-        {/* get svg ボタン */}
-        {!isDisabled && (
+        {/* get html ボタン */}
           <div>
-            {['svg'].map((val) => (
+            {['html'].map((val) => (
               <p key={val}><Button className="btn-lg pull-right" color="primary" value={val} onClick={this.clickDownloadButtonHandler}>In a new tab</Button></p>
             ))}
           </div>
-        )}
       </div>
       
     );
@@ -101,15 +98,15 @@ export default class Viewer extends CommonComponent {
   /**
    * @returns {*}
    */
-  renderSvgToStaticMarkup() {
+  renderHtmlToStaticMarkup() {
     // cache
-    const { svg } = this.props;
+    const { html } = this.props;
 
-    return ReactDOMServer.renderToStaticMarkup(svg)
+    return ReactDOMServer.renderToStaticMarkup(html)
   }
 
   /**
-   * draw svg to canvas
+   * draw html to canvas
    * @returns {*}
    */
   drawCanvas() {
@@ -121,9 +118,8 @@ export default class Viewer extends CommonComponent {
     const canvas        = findDOMNode(this.refs.canvas);
     const context       = canvas.getContext('2d');
     const imageEl       = new Image();
-    // const staticSvgBlob = new Blob([this.renderSvgToStaticMarkup()], { type: 'image/svg+xml;charset=utf-8' });
-    const staticSvgBlob = new Blob([this.renderSvgToStaticMarkup()], { type: 'text/html;charset=utf-8' });
-    const url           = URL.createObjectURL(staticSvgBlob);
+    const staticHtmlBlob = new Blob([this.renderHtmlToStaticMarkup()], { type: 'text/html;charset=utf-8' });
+    const url           = URL.createObjectURL(staticHtmlBlob);
 
     // set load event handler
     imageEl.onload = () => {
@@ -145,8 +141,8 @@ export default class Viewer extends CommonComponent {
     imageEl.crossOrigin = 'Anonymous';
     imageEl.src = url;
 
-    // return staticSvgBlob
-    return staticSvgBlob;
+    // return staticHtmlBlob
+    return staticHtmlBlob;
   }
 
   /**
@@ -168,18 +164,18 @@ export default class Viewer extends CommonComponent {
 
     // set url
     switch (value) {
-    case 'svg':
-      url = URL.createObjectURL(this[keyOfStaticSvgBlob]);
+    case 'html':
+      url = URL.createObjectURL(this[keyOfStaticHtmlBlob]);
       break;
     default:
       return;
     }
 
     // open in new window
-    if (lastSvgUrl) {
-      URL.revokeObjectURL(lastSvgUrl);
+    if (lastHtmlUrl) {
+      URL.revokeObjectURL(lastHtmlUrl);
     }
-    lastSvgUrl = url;
-    window.open(lastSvgUrl, 'generatedImage');
+    lastHtmlUrl = url;
+    window.open(lastHtmlUrl, 'generatedImage');
   }
 }
