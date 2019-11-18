@@ -24,4 +24,4 @@ class DefaultHeader extends Component {
 DefaultHeader.propTypes = propTypes;
 DefaultHeader.defaultProps = defaultProps;
 
-export default DefaultHeader;
+export default DefaultHeader; 
