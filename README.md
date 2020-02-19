@@ -48,27 +48,3 @@ CoreUI-React#v2.0.0
 - /src/routes.js
 
 new menu  => (Home )
-
-
-## Branch
-
-|ブランチ名|issue|
-|-|-|
-|master|最小限のコンテンツ|
-|coreui|オリジナル|
-|test0|nari19ディレクトリ作成/headerコメントアウト/menuコメントアウト(_nav.js)/リダイレクトをnari19に変換(DefaultLayout.js L71)|
-|test1|MDediter, MemoPrint 作成|
-|test2|_nav.js,routes.js メニューを最小限に減らす|
-|test3|DefaultHeader整理|
-|test4|"Memo print"記述 logic.js 作成|
-|test5|MemlPrint.js 記述2 textarea DOM構築  https://qiita.com/kadowakid/items/ab6231347098d24dd7ab|
-|test6|MDediter基礎完成 nari19/memoprint/MDediter 残す|
-|test7|side-navを消去 inputとoutputで2カラムにする GithubCSS追加| 
-|test8|不要なコード、ファイルの削除  app/MemoPrint/ nari19/ DefaultAside.js  ライブラリ整理　DefaultHeader DefaultLayout|
-|test9|_nav.js削除  src/viws/app/MDediter  => src/MDediter|
-|test10|コード表示タブ 追加 　|
-|test11|github pagesにデプロイ img/avators 削除 =>デプロイ|
-|test12|blobスキーム受け渡し src/Viewer/Viewer.js [In a new tab 機能]1 =>デプロイ|
-|test13|[In a new tab 機能]2|
-||test14|In a new tab 機能をHTMLで実装 IEでの利用&縦幅を自由に選択|
-|test15|canvas svg のキーワードを修正|
