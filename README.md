@@ -4,6 +4,7 @@
 
 url: https://mdediter.nari19.me/
 
+
 ## 参考URL
 
 - [CoreUI GitHub](https://github.com/coreui/coreui-free-react-admin-template)
@@ -40,11 +41,3 @@ CoreUI-React#v2.0.0
 │
 └── package.json
 ```
-
-## memo
-
-- /src/containers/DefaultLayout/DefaultLayout.js
-- /src/_nav.js
-- /src/routes.js
-
-new menu  => (Home )
