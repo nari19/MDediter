@@ -71,7 +71,7 @@ class MDediter extends Component {
                   <Button id="downloadImageButton" className="btn-lg pull-right" color="primary" onClick={this.handleClick} >Sava image</Button>
                   <a id="getImage" href="./" className="d-none" download="image.png">画像保存</a>
                   {/* <Button id="downloadImageButton" className="btn-lg pull-right" color="primary" onClick={this.handleClick} >Open in a new tab</Button> */}
-                  <Viewer html={this.renderHtml()} />
+                  <Viewer html={this.renderHtml()}/>
               </CardFooter>
             </Card>
           </Col>

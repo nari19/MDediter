@@ -133,9 +133,9 @@ export default class Viewer extends CommonComponent {
     };
 
     // set error event handler
-    // imageEl.onerror = () => {
-    //   this.props.onError();
-    // };
+    imageEl.onError = () => {
+      this.props.onError();
+    };
 
     // load image
     imageEl.crossOrigin = 'Anonymous';

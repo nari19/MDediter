@@ -4,12 +4,13 @@
 
 Github: https://github.com/nari19/MDediter
 
+## Powerd by
 - react
 - coreui
 - html2canvas
 - marked
 
-## hoge
+## hogefugapiyo
 
 ```
 $ foo

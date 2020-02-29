@@ -19,7 +19,7 @@ $ npm start
 $ npm run build
 $ serve -s build
 
-$ npm run deploy   // リモートのgh-pagesブランチにデプロイ
+$ npm run deploy   // リモートのgh-pagesブランチにデプロイ(デプロイ毎にカスタムドメインの設定がリセットされることに注意)
 ```
 
 ## What's included
